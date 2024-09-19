@@ -60,16 +60,29 @@ h1 {
     
 }
 
-.blog-text {
-    padding: 0 10px;
+.blog-title {
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    line-height: normal;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 0;
+    margin-top: 5px
+}
 
-    color: white;
-    transition: all 0.25s;
-    background: linear-gradient(120deg, #bc479c, #7a47bc);
-    text-decoration: none;
-    -webkit-text-fill-color: none
+@media (prefers-color-scheme: dark) {
+    .blog-title {
+        background-color: #111
+    }
+}
 
-    
+.blog-title a {
+    text-transform: lowercase;
+    font-style: normal !important;
+    color: #ffffff
 }
 
 @media (prefers-color-scheme: dark) {
