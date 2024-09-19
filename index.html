@@ -1,273 +1,251 @@
-<!DOCTYPE html> 
-<html lang="en"> 
+<html lang="en">
+<link rel="stylesheet" href="https://kipp.ly/blog/themes/purple.css">
 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content= 
-        "width=device-width, initial-scale=1.0"> 
-    <style> 
-        body { 
-            font-family: Arial, sans-serif; 
-            margin: 0; 
-            padding: 0; 
-        } 
+<head>
+    <meta charset="utf-8" />
+    <meta name="referrer" content="no-referrer">
 
-        header { 
-            background-color: #ffffff; 
-            color: #000000; 
-            text-align: center; 
-        } 
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
 
-        nav { 
-            background-color: #242424; 
-            padding: 10px; 
-        } 
 
-        nav a { 
-            color: #fff; 
-            text-decoration: none; 
-            padding: 10px; 
-            margin-right: 10px; 
-            display: inline-block; 
-        } 
+    <title>Tomas&#x27;Vargas</title>
 
-        .container { 
-            display: flex; 
-            justify-content: space-between; 
-            max-width: 95%; 
-            margin: 0 auto; 
-            padding: 20px; 
-        } 
+    <meta property="og:title" content="kipply&#x27;s blog" />
+    <meta name="twitter:title" content="kipply&#x27;s blog" />
 
-        article p { 
-            text-align: justify; 
-        } 
+    <meta name="description" content="kipply&#x27;s blog about stuff she does or reads about or observes">
+    <meta property="og:description" content="kipply&#x27;s blog about stuff she does or reads about or observes">
+    <meta name="twitter:description" content="kipply&#x27;s blog about stuff she does or reads about or observes">
 
-        main { 
-            flex: 2; 
-        } 
+    <meta property="og:site_name" content="kipply&#x27;s blog" />
+    <meta property="og:url" content="https:&#x2F;&#x2F;kipp.ly&#x2F;blog" />
 
-        article { 
-            margin-bottom: 20px; 
-            padding: 10px 20px; 
-            border: 1px solid rgb(145, 145, 145); 
-            margin-right: 10px; 
-        } 
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/linux-libertine-o" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
 
-        aside { 
-            flex: 1; 
-            background-color: #c9c9c9; 
-            padding: 10px; 
-        } 
 
-        footer { 
-            background-color: #242424; 
-            color: #fff; 
-            text-align: center; 
-            position: fixed; 
-            bottom: 0; 
-            width: 100%; 
-        } 
-    </style> 
-    <title>Blogging Website Layout</title> 
-</head> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
 
-<body> 
-    <header> 
-        <h1>GeeksforGeeks</h1> 
-        <p>A computer science portal for geeks</p> 
-    </header> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css"
+        integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
 
-    <nav> 
-        <a href="#">Home</a> 
-        <a href="#">HTML</a> 
-        <a href="#">CSS</a> 
-        <a href="#">JavaScript</a> 
-        <a href="#">ReactJS</a> 
-    </nav> 
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js"
+        integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/mathtex-script-type.min.js"
+        integrity="sha384-zWYbd0NBwgTsgIdFKVprSfTh1mbMPe5Hz1X3yY4Sd1h/K1cQoUe36OGwAGz/PcDy"
+        crossorigin="anonymous"></script>
 
-    <div class="container"> 
-        <main> 
-            <article> 
-                <h2>HTML</h2> 
-                <p class="post-meta"> 
-                    Published on December 11, 2023 by GeeksforGeeks 
-                </p> 
-                <p> 
-                    HTML stands for HyperText Markup Language. It is 
-                    used to design the web pages. With the help of HTML, 
-                    you can create a complete website structure. HTML 
-                    is the combination of Hypertext and Markup language. 
-                    Hypertext defines the link between the web pages 
-                    and markup language defines the text document within 
-                    the tag that define the structure of web pages. HTML stands for HyperText Markup Language. It is 
-                    used to design the web pages. With the help of HTML, 
-                    you can create a complete website structure. HTML 
-                    is the combination of Hypertext and Markup language. 
-                    Hypertext defines the link between the web pages 
-                    and markup language defines the text document within 
-                    the tag that define the structure of web pages. HTML stands for HyperText Markup Language. It is 
-                    used to design the web pages. With the help of HTML, 
-                    you can create a complete website structure. HTML 
-                    is the combination of Hypertext and Markup language. 
-                    Hypertext defines the link between the web pages 
-                    and markup language defines the text document within 
-                    the tag that define the structure of web pages. HTML stands for HyperText Markup Language. It is 
-                    used to design the web pages. With the help of HTML, 
-                    you can create a complete website structure. HTML 
-                    is the combination of Hypertext and Markup language. 
-                    Hypertext defines the link between the web pages 
-                    and markup language defines the text document within 
-                    the tag that define the structure of web pages. HTML stands for HyperText Markup Language. It is 
-                    used to design the web pages. With the help of HTML, 
-                    you can create a complete website structure. HTML 
-                    is the combination of Hypertext and Markup language. 
-                    Hypertext defines the link between the web pages 
-                    and markup language defines the text document within 
-                    the tag that define the structure of web pages. HTML stands for HyperText Markup Language. It is 
-                    used to design the web pages. With the help of HTML, 
-                    you can create a complete website structure. HTML 
-                    is the combination of Hypertext and Markup language. 
-                    Hypertext defines the link between the web pages 
-                    and markup language defines the text document within 
-                    the tag that define the structure of web pages. HTML stands for HyperText Markup Language. It is 
-                    used to design the web pages. With the help of HTML, 
-                    you can create a complete website structure. HTML 
-                    is the combination of Hypertext and Markup language. 
-                    Hypertext defines the link between the web pages 
-                    and markup language defines the text document within 
-                    the tag that define the structure of web pages. HTML stands for HyperText Markup Language. It is 
-                    used to design the web pages. With the help of HTML, 
-                    you can create a complete website structure. HTML 
-                    is the combination of Hypertext and Markup language. 
-                    Hypertext defines the link between the web pages 
-                    and markup language defines the text document within 
-                    the tag that define the structure of web pages. HTML stands for HyperText Markup Language. It is 
-                    used to design the web pages. With the help of HTML, 
-                    you can create a complete website structure. HTML 
-                    is the combination of Hypertext and Markup language. 
-                    Hypertext defines the link between the web pages 
-                    and markup language defines the text document within 
-                    the tag that define the structure of web pages. HTML stands for HyperText Markup Language. It is 
-                    used to design the web pages. With the help of HTML, 
-                    you can create a complete website structure. HTML 
-                    is the combination of Hypertext and Markup language. 
-                    Hypertext defines the link between the web pages 
-                    and markup language defines the text document within 
-                    the tag that define the structure of web pages. HTML stands for HyperText Markup Language. It is 
-                    used to design the web pages. With the help of HTML, 
-                    you can create a complete website structure. HTML 
-                    is the combination of Hypertext and Markup language. 
-                    Hypertext defines the link between the web pages 
-                    and markup language defines the text document within 
-                    the tag that define the structure of web pages. HTML stands for HyperText Markup Language. It is 
-                    used to design the web pages. With the help of HTML, 
-                    you can create a complete website structure. HTML 
-                    is the combination of Hypertext and Markup language. 
-                    Hypertext defines the link between the web pages 
-                    and markup language defines the text document within 
-                    the tag that define the structure of web pages. HTML stands for HyperText Markup Language. It is 
-                    used to design the web pages. With the help of HTML, 
-                    you can create a complete website structure. HTML 
-                    is the combination of Hypertext and Markup language. 
-                    Hypertext defines the link between the web pages 
-                    and markup language defines the text document within 
-                    the tag that define the structure of web pages. HTML stands for HyperText Markup Language. It is 
-                    used to design the web pages. With the help of HTML, 
-                    you can create a complete website structure. HTML 
-                    is the combination of Hypertext and Markup language. 
-                    Hypertext defines the link between the web pages 
-                    and markup language defines the text document within 
-                    the tag that define the structure of web pages. HTML stands for HyperText Markup Language. It is 
-                    used to design the web pages. With the help of HTML, 
-                    you can create a complete website structure. HTML 
-                    is the combination of Hypertext and Markup language. 
-                    Hypertext defines the link between the web pages 
-                    and markup language defines the text document within 
-                    the tag that define the structure of web pages. HTML stands for HyperText Markup Language. It is 
-                    used to design the web pages. With the help of HTML, 
-                    you can create a complete website structure. HTML 
-                    is the combination of Hypertext and Markup language. 
-                    Hypertext defines the link between the web pages 
-                    and markup language defines the text document within 
-                    the tag that define the structure of web pages. HTML stands for HyperText Markup Language. It is 
-                    used to design the web pages. With the help of HTML, 
-                    you can create a complete website structure. HTML 
-                    is the combination of Hypertext and Markup language. 
-                    Hypertext defines the link between the web pages 
-                    and markup language defines the text document within 
-                    the tag that define the structure of web pages. 
-                </p> 
-            </article> 
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js"
+        integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
 
-            <article> 
-                <h2>CSS</h2> 
-                <p class="post-meta"> 
-                    Published on December 10, 2023 by GeeksforGeeks 
-                </p> 
-                <p> 
-                    CSS (Cascading Style Sheets) is used to styles web 
-                    pages. Cascading Style Sheets are fondly referred 
-                    to as CSS. The reason for using this is to simplify 
-                    the process of making web pages presentable. It allows 
-                    you to apply styles on web pages. More importantly, 
-                    it enables you to do this independently of the HTML 
-                    that makes up each web page. 
-                </p> 
-            </article> 
 
-            <article> 
-                <h2>JavaScript</h2> 
-                <p class="post-meta"> 
-                    Published on December 09, 2023 by GeeksforGeeks 
-                </p> 
-                <p> 
-                    JavaScript (JS) is the most popular lightweight, 
-                    interpreted compiled programming language. It can 
-                    be used for both Client-side as well as Server-side 
-                    developments. JavaScript also known as a scripting 
-                    language for web pages. This JavaScript Tutorial is 
-                    designed to help both beginners and experienced 
-                    professionals master the fundamentals of JavaScript 
-                    and unleash their creativity to build powerful web 
-                    applications. From basic syntax and data types to 
-                    advanced topics such as object-oriented programming 
-                    and DOM manipulation. 
-                </p> 
-            </article> 
+    <script type="text/javascript">
+        let fetchStyle = function () {
+            const themes = ['amber', 'blue', 'deeppurple', 'green', 'indigo', 'lightblue', 'pink', 'purple', 'red', 'teal'];
+            const theme = "https://kipp.ly/blog/themes/" + themes[Math.floor(Math.random() * themes.length)] + ".css";
 
-            <article> 
-                <h2>ReactJS</h2> 
-                <p class="post-meta"> 
-                    Published on December 08, 2023 by GeeksforGeeks 
-                </p> 
-                <p> 
-                    ReactJS is a declarative, efficient, and flexible 
-                    JavaScript library for building user interfaces. 
-                    It is an open-source, component-based front-end 
-                    library that is responsible only for the view layer 
-                    of the application. ReactJS is not a framework, it 
-                    is just a library developed by Facebook to solve 
-                    some problems that we were facing earlier. 
-                </p> 
-            </article> 
-        </main> 
+            let link = document.createElement('link');
+            link.type = 'text/css';
+            link.rel = 'stylesheet';
+            link.onload = function () {
+                document.documentElement.setAttribute("style", "display:auto");
+            };
+            link.href = theme;
 
-        <aside> 
-            <h2>Recent Posts</h2> 
-            <ul> 
-                <li><a href="#">HTML</a></li> 
-                <li><a href="#">CSS</a></li> 
-                <li><a href="#">JavaScript</a></li> 
-                <li><a href="#">ReactJS</a></li> 
-            </ul> 
-        </aside> 
-    </div> 
+            let headScript = document.querySelector('script');
+            headScript.parentNode.insertBefore(link, headScript);
+        }
+        fetchStyle()
+    </script>
 
-    <footer> 
-        <p>© 2023 Your Blog Name. All rights reserved.</p> 
-    </footer> 
-</body> 
+    <link rel='icon' type='image/x-icon' href="https://kipp.ly/blog/favicon.ico" />
+
+    <link rel="alternate" type="application/atom+xml" title="kipply&#x27;s blog" href="https://kipp.ly/blog/atom.xml">
+
+</head>
+
+<body>
+    <div></div>
+    <header class="header">
+        <h1 class="title-link"><a href="">Tomas Vargas</a></h1>
+        <div class="header-links">
+            <a href="https://twitter.com/tomasvargas__">Twitter</a>,
+            <a href="https://www.youtube.com/channel/UCMsg-Fe9aevrEbRngjaUDwg">Youtube </a>
+        </div>
+    </header>
+
+    <main id="main" class="main">
+        <div class="row">
+            <div class="col">
+                <h1 class="section-title">My Youtube Videos</h1>
+
+                <article class="c-article p-list-article">
+
+                    <header>
+                        <h2 class="article-title"><a href="https://www.youtube.com/watch?v=8kjLpTh2Pmw">The Key to
+                                Happiness? The Gradient Descent Algorithm</a></h2>
+                        <p class="article-meta">
+                            <time datetime="2023-07-13">
+                                2023-07-13
+                            </time>
+
+                            (12 min video)
+                        </p>
+                    </header>
+
+                    <header>
+                        <h2 class="article-title"><a href="https://www.youtube.com/watch?v=-fmLarlXIys">Solving where
+                                and when two cars meet [Physics] </a></h2>
+                        <p class="article-meta">
+                            <time datetime="2022-07-12">
+                                2022-07-12
+                            </time>
+
+                            (5 min video)
+                        </p>
+                    </header>
+
+                </article>
+
+                <h1 class="section-title">Favourites</h1>
+
+                <article class="c-article p-list-article">
+
+                    <header>
+                        <h2 class="article-title"><a href="https://blog.samaltman.com/how-to-be-successful">How to be
+                                successful by Sam Altman</a></h2>
+                        <p class="article-meta">
+                            <time datetime="2023-04-05">
+                                2023-04-05
+                            </time>
+
+                            (20 min read)
+                        </p>
+                    </header>
+
+                </article>
+
+                <article class="c-article p-list-article">
+
+                    <header>
+                        <h2 class="article-title"><a href="https://knowyourdata-tfds.withgoogle.com">Know your data
+                                catalog</a></h2>
+                        <p class="article-meta">
+                            <time datetime="2023-04-05">
+                                2023-04-05
+                            </time>
+
+
+                        </p>
+                    </header>
+
+                </article>
+                <article class="c-article p-list-article">
+                    <header>
+                        <h2 class="article-title"><a href=" https://www.youtube.com/watch?v=5a5VSkkdpB4">President Obama
+                                Speech to Students</a></h2>
+                        <p class="article-meta">
+                            <time datetime="2017-07-28">
+                                2017-07-28
+                            </time>
+
+                            (17 min video)
+                        </p>
+                    </header>
+
+
+                </article>
+
+                <article class="c-article p-list-article">
+
+                    <header>
+                        <h2 class="article-title"><a href="https://www.youtube.com/watch?v=0lJKucu6HJc">How to Succeed
+                                with a Startup</a></h2>
+                        <p class="article-meta">
+                            <time datetime="2023-04-06">
+                                2023-04-06
+                            </time>
+
+                            (16 min video)
+
+                        </p>
+                    </header>
+
+                </article>
+
+                <article class="c-article p-list-article">
+
+                    <header>
+                        <h2 class="article-title"><a
+                                href="https://www.youtube.com/watch?v=p4X7uXfZ2cY&list=LL&index=27">Foundations of
+                                Happiness - Will Schoder
+                            </a></h2>
+                        <p class="article-meta">
+                            <time datetime="2020-07-30">
+                                2020-07-30
+                            </time>
+
+                            (56 min video)
+
+                        </p>
+                    </header>
+
+                </article>
+
+                <article class="c-article p-list-article">
+
+                    <header>
+                        <h2 class="article-title"><a href=" https://www.youtube.com/watch?v=GI7sBsBHdCk&list=LL&index=30
+                                ">The Federal Reserve vs Covid
+                            </a></h2>
+                        <p class="article-meta">
+                            <time datetime="2020-04-11">
+                                2020-04-11
+                            </time>
+
+                            (3 min video)
+
+                        </p>
+                    </header>
+
+                </article>
+
+            </div>
+            <div class="col">
+                <h1 class="section-title">chronological</h1>
+
+
+                <article class="c-article p-list-article">
+
+                    <header>
+                        <h2 class="article-title"><a
+                                href=" https://www.positive.news/environment/good-news-stories-from-week-24-of-2023/">Positive
+                                News Articles</a></h2>
+                        <p class="article-meta">
+                            <time datetime="Any time">
+                                Any time
+                            </time>
+
+                        </p>
+                    </header>
+
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+    <link rel="stylesheet" href="https://kipp.ly/blog/css/katex.min.css">
+    <script defer src="https://kipp.ly/blog/js/katex.min.js"></script>
+    <script defer src="https://kipp.ly/blog/js/mathtex-script-type.min.js"></script>
+    <script src="https://kit.fontawesome.com/fa2f0e5568.js" crossorigin="anonymous"></script>
+</body>
 
 </html>
-
