@@ -1,250 +1,124 @@
-<html lang="en">
-<link rel="stylesheet" href="https://kipp.ly/blog/themes/purple.css">
-
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    <!-- Enable responsiveness on mobile devices-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
 
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
 
-    <title>Tomas&#x27;Vargas</title>
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
 
-    <meta property="og:title" content="Tomas&#x27;s blog" />
-    <meta name="twitter:title" content="Tomas&#x27;s blog" />
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
 
-    <meta name="description" content="Tomas&#x27;s blog about stuff he does or reads about or observes">
-    <meta property="og:description" content="Tomas&#x27;s blog about stuff he does or reads about or observes">
-    <meta name="twitter:description" content="Tomas&#x27;s blog about stuff he does or reads about or observes">
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
 
-    <meta property="og:site_name" content="tomas&#x27;s blog" />
-    <meta property="og:url" content="" />
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
 
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Rubik&display=swap" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/linux-libertine-o" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css"
-        integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
-
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js"
-        integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx"
-        crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/mathtex-script-type.min.js"
-        integrity="sha384-zWYbd0NBwgTsgIdFKVprSfTh1mbMPe5Hz1X3yY4Sd1h/K1cQoUe36OGwAGz/PcDy"
-        crossorigin="anonymous"></script>
-
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js"
-        integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
-
-
-    <script type="text/javascript">
-        let fetchStyle = function () {
-            const themes = ['amber', 'blue', 'deeppurple', 'green', 'indigo', 'lightblue', 'pink', 'purple', 'red', 'teal'];
-            const theme = "https://kipp.ly/blog/themes/" + themes[Math.floor(Math.random() * themes.length)] + ".css";
-
-            let link = document.createElement('link');
-            link.type = 'text/css';
-            link.rel = 'stylesheet';
-            link.onload = function () {
-                document.documentElement.setAttribute("style", "display:auto");
-            };
-            link.href = theme;
-
-            let headScript = document.querySelector('script');
-            headScript.parentNode.insertBefore(link, headScript);
-        }
-        fetchStyle()
-    </script>
-
-    <link rel='icon' type='image/x-icon' href="https://kipp.ly/blog/favicon.ico" />
-
-    <link rel="alternate" type="application/atom+xml" title="Tomas&#x27;s blog" href="https://kipp.ly/blog/atom.xml">
-
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
 </head>
-
 <body>
-    <div></div>
-    <header class="header">
-        <h1 class="title-link"><a href="">Tomas Vargas</a></h1>
-        <div class="header-links">
-            <a href="https://twitter.com/tomasvargas__">Twitter</a>,
-            <a href="https://www.youtube.com/channel/UCMsg-Fe9aevrEbRngjaUDwg">Youtube </a>
-        </div>
-    </header>
 
-    <main id="main" class="main">
-        <div class="row">
-            <div class="col">
-                <h1 class="section-title">My Youtube Videos</h1>
+<div class="header">
+  <h2>Blog Name</h2>
+</div>
 
-                <article class="c-article p-list-article">
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Dec 7, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+</div>
 
-                    <header>
-                        <h2 class="article-title"><a href="https://www.youtube.com/watch?v=8kjLpTh2Pmw">The Key to
-                                Happiness? The Gradient Descent Algorithm</a></h2>
-                        <p class="article-meta">
-                            <time datetime="2023-07-13">
-                                2023-07-13
-                            </time>
+<div class="footer">
+  <h2>Footer</h2>
+</div>
 
-                            (12 min video)
-                        </p>
-                    </header>
-
-                    <header>
-                        <h2 class="article-title"><a href="https://www.youtube.com/watch?v=-fmLarlXIys">Solving where
-                                and when two cars meet [Physics] </a></h2>
-                        <p class="article-meta">
-                            <time datetime="2022-07-12">
-                                2022-07-12
-                            </time>
-
-                            (5 min video)
-                        </p>
-                    </header>
-
-                </article>
-
-                <h1 class="section-title">Favourites</h1>
-
-                <article class="c-article p-list-article">
-
-                    <header>
-                        <h2 class="article-title"><a href="https://tvrcv.github.io/Blog/index2.html">testing index2</a></h2>
-                        <p class="article-meta">
-                            <time datetime="2023-04-05">
-                                2023-04-05
-                            </time>
-
-                            (20 min read)
-                        </p>
-                    </header>
-
-                </article>
-
-                <article class="c-article p-list-article">
-
-                    <header>
-                        <h2 class="article-title"><a href="https://knowyourdata-tfds.withgoogle.com">Know your data
-                                catalog</a></h2>
-                        <p class="article-meta">
-                            <time datetime="2023-04-05">
-                                2023-04-05
-                            </time>
-
-
-                        </p>
-                    </header>
-
-                </article>
-                <article class="c-article p-list-article">
-                    <header>
-                        <h2 class="article-title"><a href=" https://www.youtube.com/watch?v=5a5VSkkdpB4">President Obama
-                                Speech to Students</a></h2>
-                        <p class="article-meta">
-                            <time datetime="2017-07-28">
-                                2017-07-28
-                            </time>
-
-                            (17 min video)
-                        </p>
-                    </header>
-
-
-                </article>
-
-                <article class="c-article p-list-article">
-
-                    <header>
-                        <h2 class="article-title"><a href="https://www.youtube.com/watch?v=0lJKucu6HJc">How to Succeed
-                                with a Startup</a></h2>
-                        <p class="article-meta">
-                            <time datetime="2023-04-06">
-                                2023-04-06
-                            </time>
-
-                            (16 min video)
-
-                        </p>
-                    </header>
-
-                </article>
-
-                <article class="c-article p-list-article">
-
-                    <header>
-                        <h2 class="article-title"><a
-                                href="https://www.youtube.com/watch?v=p4X7uXfZ2cY&list=LL&index=27">Foundations of
-                                Happiness - Will Schoder
-                            </a></h2>
-                        <p class="article-meta">
-                            <time datetime="2020-07-30">
-                                2020-07-30
-                            </time>
-
-                            (56 min video)
-
-                        </p>
-                    </header>
-
-                </article>
-
-                <article class="c-article p-list-article">
-
-                    <header>
-                        <h2 class="article-title"><a href=" https://www.youtube.com/watch?v=GI7sBsBHdCk&list=LL&index=30
-                                ">The Federal Reserve vs Covid
-                            </a></h2>
-                        <p class="article-meta">
-                            <time datetime="2020-04-11">
-                                2020-04-11
-                            </time>
-
-                            (3 min video)
-
-                        </p>
-                    </header>
-
-                </article>
-
-            </div>
-            <div class="col">
-                <h1 class="section-title">chronological</h1>
-
-
-                <article class="c-article p-list-article">
-
-                    <header>
-                        <h2 class="article-title"><a
-                                href=" https://www.positive.news/environment/good-news-stories-from-week-24-of-2023/">Positive
-                                News Articles</a></h2>
-                        <p class="article-meta">
-                            <time datetime="Any time">
-                                Any time
-                            </time>
-
-                        </p>
-                    </header>
-
-                </article>
-
-            </div>
-        </div>
-    </main>
-
-    <link rel="stylesheet" href="https://kipp.ly/blog/css/katex.min.css">
-    <script defer src="https://kipp.ly/blog/js/katex.min.js"></script>
-    <script defer src="https://kipp.ly/blog/js/mathtex-script-type.min.js"></script>
-    <script src="https://kit.fontawesome.com/fa2f0e5568.js" crossorigin="anonymous"></script>
 </body>
-
 </html>
