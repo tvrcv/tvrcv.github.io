@@ -1,176 +1,74 @@
-<!DOCTYPE html> 
-<html lang="en"> 
+<html lang="en">
+<link rel="stylesheet" href="home.css">
 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content= 
-        "width=device-width, initial-scale=1.0"> 
-    <style> 
-        body { 
-            font-family: Arial, sans-serif; 
-            margin: 0; 
-            padding: 0; 
-        } 
+<head>
+    <meta charset="utf-8" />
+    <meta name="referrer" content="no-referrer">
 
-        header { 
-            background-color: #ffffff; 
-            color: #000000; 
-            text-align: center; 
-        } 
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
 
-        nav { 
-            background-color: #242424; 
-            padding: 10px; 
-        } 
 
-        nav a { 
-            color: #fff; 
-            text-decoration: none; 
-            padding: 10px; 
-            margin-right: 10px; 
-            display: inline-block; 
-        } 
+    <title>Tomas Vargas </title>
 
-        .container { 
-            display: flex; 
-            justify-content: space-between; 
-            max-width: 95%; 
-            margin: 0 auto; 
-            padding: 20px; 
-        } 
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/linux-libertine-o" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
 
-        article p { 
-            text-align: justify; 
-        } 
 
-        main { 
-            flex: 2; 
-        } 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script>
 
-        article { 
-            margin-bottom: 20px; 
-            padding: 10px 20px; 
-            border: 1px solid rgb(145, 145, 145); 
-            margin-right: 10px; 
-        } 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css"
+        integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
 
-        aside { 
-            flex: 1; 
-            background-color: #c9c9c9; 
-            padding: 10px; 
-        } 
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js"
+        integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/mathtex-script-type.min.js"
+        integrity="sha384-zWYbd0NBwgTsgIdFKVprSfTh1mbMPe5Hz1X3yY4Sd1h/K1cQoUe36OGwAGz/PcDy"
+        crossorigin="anonymous"></script>
 
-        footer { 
-            background-color: #242424; 
-            color: #fff; 
-            text-align: center; 
-            position: fixed; 
-            bottom: 0; 
-            width: 100%; 
-        } 
-    </style> 
-    <title>Blogging Website Layout</title> 
-</head> 
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js"
+        integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
 
-<body> 
-    <header> 
-        <h1>GeeksforGeeks</h1> 
-        <p>A computer science portal for geeks</p> 
-    </header> 
+</head>
 
-    <nav> 
-        <a href="#">Home</a> 
-        <a href="#">HTML</a> 
-        <a href="#">CSS</a> 
-        <a href="#">JavaScript</a> 
-        <a href="#">ReactJS</a> 
-    </nav> 
+<body>
+    <div></div>
+    <header class="header">
+        <h1 class="title-link"><a href="">Tomas Vargas</a></h1>
+        <div class="header-links">
+            <a href="https://twitter.com/tomasvargas__">Twitter</a>,
+            <a href="https://www.youtube.com/channel/UCMsg-Fe9aevrEbRngjaUDwg">Youtube </a>
+        </div>
+    </header>
 
-    <div class="container"> 
-        <main> 
-            <article> 
-                <h2>HTML</h2> 
-                <p class="post-meta"> 
-                    Published on December 11, 2023 by GeeksforGeeks 
-                </p> 
-                <p> 
-                    HTML stands for HyperText Markup Language. It is 
-                    used to design the web pages. With the help of HTML, 
-                    you can create a complete website structure. HTML 
-                    is the combination of Hypertext and Markup language. 
-                    Hypertext defines the link between the web pages 
-                    and markup language defines the text document within 
-                    the tag that define the structure of web pages. 
-                </p> 
-            </article> 
 
-            <article> 
-                <h2>CSS</h2> 
-                <p class="post-meta"> 
-                    Published on December 10, 2023 by GeeksforGeeks 
-                </p> 
-                <p> 
-                    CSS (Cascading Style Sheets) is used to styles web 
-                    pages. Cascading Style Sheets are fondly referred 
-                    to as CSS. The reason for using this is to simplify 
-                    the process of making web pages presentable. It allows 
-                    you to apply styles on web pages. More importantly, 
-                    it enables you to do this independently of the HTML 
-                    that makes up each web page. 
-                </p> 
-            </article> 
+    <main id="main" class="main">
+        <div class="row">
+            <div class="col">
+                <h1 class="section-title">Preambulo</h1>
 
-            <article> 
-                <h2>JavaScript</h2> 
-                <p class="post-meta"> 
-                    Published on December 09, 2023 by GeeksforGeeks 
-                </p> 
-                <p> 
-                    JavaScript (JS) is the most popular lightweight, 
-                    interpreted compiled programming language. It can 
-                    be used for both Client-side as well as Server-side 
-                    developments. JavaScript also known as a scripting 
-                    language for web pages. This JavaScript Tutorial is 
-                    designed to help both beginners and experienced 
-                    professionals master the fundamentals of JavaScript 
-                    and unleash their creativity to build powerful web 
-                    applications. From basic syntax and data types to 
-                    advanced topics such as object-oriented programming 
-                    and DOM manipulation. 
-                </p> 
-            </article> 
+                <article class="c-article p-list-article">
 
-            <article> 
-                <h2>ReactJS</h2> 
-                <p class="post-meta"> 
-                    Published on December 08, 2023 by GeeksforGeeks 
-                </p> 
-                <p> 
-                    ReactJS is a declarative, efficient, and flexible 
-                    JavaScript library for building user interfaces. 
-                    It is an open-source, component-based front-end 
-                    library that is responsible only for the view layer 
-                    of the application. ReactJS is not a framework, it 
-                    is just a library developed by Facebook to solve 
-                    some problems that we were facing earlier. 
-                </p> 
-            </article> 
-        </main> 
+                    <header>
+                        <h2 class="article-title"><a href="">Estoy en la víspera de mi trigésimo cumpleaños,  y en estos días veraniegos que se hacen eternos, dichosamente he logrado sacar rincones de tiempo para sentarme a pensar y observar lo rápido que cambia el mundo. Es el 2024, y me cuesta ignorar como estamos perdiendo nuestra habilidad como seres humanos para razonar. Desde los tiempos de antaño, desde que los humanos somos humanos, hemos tenido una capacidad extraordinaria para pensar. Capacidad que, a través de los años, nos ha permitido resolver problemas inauditos. Como alimentarnos, como movilizarnos, como estructurar nuestras comunidades, y un millón de problemas más.  Hemos honrado a los grandes pensadores de la historia humana, y su capacidad de hacerse preguntas, enamorarse de lo desconocido, estudiar, y describir sus conclusiones. Existía cierta obsesión por entender lo inentendible,  el método científico era algo más cotidiano. El mundo se movía más despacio, y a su vez nos prestaba más tiempo para sentarnos a pensar.  
 
-        <aside> 
-            <h2>Recent Posts</h2> 
-            <ul> 
-                <li><a href="#">HTML</a></li> 
-                <li><a href="#">CSS</a></li> 
-                <li><a href="#">JavaScript</a></li> 
-                <li><a href="#">ReactJS</a></li> 
-            </ul> 
-        </aside> 
-    </div> 
+                            Entonces, que ha pasado? ¿Porque es que hoy en día tener el tiempo y la capacidad para pensar es un lujo? Mas allá de situaciones críticas como las que sufren las personas en Ucrania y Palestina (entre muchas otras), la calidad de vida promedio alrededor del mundo se ha disparado las últimas décadas. Entiendo completamente como personas que han tenido una vida extraordinariamente dura y llena de odio no logran encontrar el tiempo para ejercitar sus músculos pensadores (Pirámide de Maslow). ¿Pero nosotros en el Occidente que hemos tenido una vida para todo propósito digna y segura, que nos está pasando? 
+                            Ya sea por la invención del internet, o la popularización de las redes sociales cuyos ingenieros nos roban el tiempo, cada día pensamos menos. Por más de que nuestros cerebros técnicamente no son músculos, se nos podría llegar a ser más fácil pensar que si lo son, y si no los entrenamos se atrofian.  Nuestro constante acceso a las opiniones de millones de personas limita nuestra habilidad de pensar y llegar a nuestras propias conclusiones. Pero más allá de eso, no se trata de dejar de escuchar, se trata de saber escoger lo que escuchamos, y aun más importante su fuente. Tenemos que encontrar el balance entre ser personas que aprenden de su entorno, y personas que se dejan llevar por él. Con este escrito intento contribuir aunque sea en lo más mínimo a esta lucha que tenemos por nuestra atención, por nuestro tiempo, y aún más importante, nuestra capacidad como humanos de encontrar nuestro propósito en la vida.
+                            </a></h2>
+                        <p class="article-meta">
+                            <time datetime="2024-09-20">
+                                2024-09-20
+                            </time>
+                        </p>
+                    </header>
+                </article>
+            </div>
+        </div>
+    </main>
 
-    <footer> 
-        <p>© 2023 Your Blog Name. All rights reserved.</p> 
-    </footer> 
-</body> 
-
-</html>
