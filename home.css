@@ -348,7 +348,7 @@ footer {
         bottom: 0;
         left: 0;
         pointer-events: none;
-        background: linear-gradient(60deg, #ffffff, #bc479c);
+        background: linear-gradient(60deg, #e45dff, #bc479c);
         mix-blend-mode: lighten
     }
 
