@@ -1,124 +1,177 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
+<!DOCTYPE html> 
+<html lang="en"> 
 
-/* Add a gray background color with some padding */
-body {
-  font-family: Arial;
-  padding: 20px;
-  background: #f1f1f1;
-}
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content= 
+        "width=device-width, initial-scale=1.0"> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+        } 
 
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  font-size: 40px;
-  text-align: center;
-  background: white;
-}
+        header { 
+            background-color: #ffffff; 
+            color: #000000; 
+            text-align: center; 
+        } 
 
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-  float: left;
-  width: 75%;
-}
+        nav { 
+            background-color: #242424; 
+            padding: 10px; 
+        } 
 
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  padding-left: 20px;
-}
+        nav a { 
+            color: #fff; 
+            text-decoration: none; 
+            padding: 10px; 
+            margin-right: 10px; 
+            display: inline-block; 
+        } 
 
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
+        .container { 
+            display: flex; 
+            justify-content: space-between; 
+            max-width: 95%; 
+            margin: 0 auto; 
+            padding: 20px; 
+        } 
 
-/* Add a card effect for articles */
-.card {
-   background-color: white;
-   padding: 20px;
-   margin-top: 20px;
-}
+        article p { 
+            text-align: justify; 
+        } 
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+        main { 
+            flex: 2; 
+        } 
 
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-}
+        article { 
+            margin-bottom: 20px; 
+            padding: 10px 20px; 
+            border: 1px solid rgb(145, 145, 145); 
+            margin-right: 10px; 
+        } 
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
-}
-</style>
-</head>
-<body>
+        aside { 
+            flex: 1; 
+            background-color: #c9c9c9; 
+            padding: 10px; 
+        } 
 
-<div class="header">
-  <h2>Blog Name</h2>
-</div>
+        footer { 
+            background-color: #242424; 
+            color: #fff; 
+            text-align: center; 
+            position: fixed; 
+            bottom: 0; 
+            width: 100%; 
+        } 
+    </style> 
+    <title>Blogging Website Layout</title> 
+</head> 
 
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>About Me</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    </div>
-    <div class="card">
-      <h3>Popular Post</h3>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div><br>
-      <div class="fakeimg">Image</div>
-    </div>
-    <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
-    </div>
-  </div>
-</div>
+<body> 
+    <header> 
+        <h1>GeeksforGeeks</h1> 
+        <p>A computer science portal for geeks</p> 
+    </header> 
 
-<div class="footer">
-  <h2>Footer</h2>
-</div>
+    <nav> 
+        <a href="#">Home</a> 
+        <a href="#">HTML</a> 
+        <a href="#">CSS</a> 
+        <a href="#">JavaScript</a> 
+        <a href="#">ReactJS</a> 
+    </nav> 
 
-</body>
+    <div class="container"> 
+        <main> 
+            <article> 
+                <h2>HTML</h2> 
+                <p class="post-meta"> 
+                    Published on December 11, 2023 by GeeksforGeeks 
+                </p> 
+                <p> 
+                    HTML stands for HyperText Markup Language. It is 
+                    used to design the web pages. With the help of HTML, 
+                    you can create a complete website structure. HTML 
+                    is the combination of Hypertext and Markup language. 
+                    Hypertext defines the link between the web pages 
+                    and markup language defines the text document within 
+                    the tag that define the structure of web pages. 
+                </p> 
+            </article> 
+
+            <article> 
+                <h2>CSS</h2> 
+                <p class="post-meta"> 
+                    Published on December 10, 2023 by GeeksforGeeks 
+                </p> 
+                <p> 
+                    CSS (Cascading Style Sheets) is used to styles web 
+                    pages. Cascading Style Sheets are fondly referred 
+                    to as CSS. The reason for using this is to simplify 
+                    the process of making web pages presentable. It allows 
+                    you to apply styles on web pages. More importantly, 
+                    it enables you to do this independently of the HTML 
+                    that makes up each web page. 
+                </p> 
+            </article> 
+
+            <article> 
+                <h2>JavaScript</h2> 
+                <p class="post-meta"> 
+                    Published on December 09, 2023 by GeeksforGeeks 
+                </p> 
+                <p> 
+                    JavaScript (JS) is the most popular lightweight, 
+                    interpreted compiled programming language. It can 
+                    be used for both Client-side as well as Server-side 
+                    developments. JavaScript also known as a scripting 
+                    language for web pages. This JavaScript Tutorial is 
+                    designed to help both beginners and experienced 
+                    professionals master the fundamentals of JavaScript 
+                    and unleash their creativity to build powerful web 
+                    applications. From basic syntax and data types to 
+                    advanced topics such as object-oriented programming 
+                    and DOM manipulation. 
+                </p> 
+            </article> 
+
+            <article> 
+                <h2>ReactJS</h2> 
+                <p class="post-meta"> 
+                    Published on December 08, 2023 by GeeksforGeeks 
+                </p> 
+                <p> 
+                    ReactJS is a declarative, efficient, and flexible 
+                    JavaScript library for building user interfaces. 
+                    It is an open-source, component-based front-end 
+                    library that is responsible only for the view layer 
+                    of the application. ReactJS is not a framework, it 
+                    is just a library developed by Facebook to solve 
+                    some problems that we were facing earlier. 
+                </p> 
+            </article> 
+        </main> 
+
+        <aside> 
+            <h2>Recent Posts</h2> 
+            <ul> 
+                <li><a href="#">HTML</a></li> 
+                <li><a href="#">CSS</a></li> 
+                <li><a href="#">JavaScript</a></li> 
+                <li><a href="#">ReactJS</a></li> 
+            </ul> 
+        </aside> 
+    </div> 
+
+    <footer> 
+        <p>© 2023 Your Blog Name. All rights reserved.</p> 
+    </footer> 
+</body> 
+
 </html>
+
