@@ -55,7 +55,6 @@ h1 {
     transition: all 0.25s;
     background: linear-gradient(120deg, #bc479c, #7a47bc);
     text-decoration: none;
-    -webkit-background-clip: none;
     -webkit-text-fill-color: none
 }
 
@@ -235,7 +234,6 @@ footer {
     transition: all 0.25s;
     background: linear-gradient(120deg, #bc479c, #7a47bc);
     text-decoration: none;
-    -webkit-background-clip: none;
     -webkit-text-fill-color: none
 }
 
@@ -309,7 +307,6 @@ footer {
 .article-body a:hover,
 .article-body a:focus {
     background: -webkit-linear-gradient(45deg, #deb7e5, #e5c7b7);
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent
 }
 
@@ -324,7 +321,6 @@ footer {
     .article-body a:hover,
     .article-body a:focus {
         background: -webkit-linear-gradient(45deg, #682a73, #73442a);
-        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent
     }
 }
@@ -402,7 +398,6 @@ footer {
 
 .notfound h1 {
     background: linear-gradient(-60deg, #bc479c, #7a47bc);
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent
 }
 
