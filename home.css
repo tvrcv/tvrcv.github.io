@@ -62,9 +62,10 @@ h1 {
 
 .blog-text {
     padding: 0 10px;
+
     color: white;
     transition: all 0.25s;
-    background: linear-gradient(120deg, #ffffff, #ffffff);
+    background: linear-gradient(120deg, #bc479c, #7a47bc);
     text-decoration: none;
     -webkit-text-fill-color: none
 
@@ -347,7 +348,7 @@ footer {
         bottom: 0;
         left: 0;
         pointer-events: none;
-        background: linear-gradient(60deg, #7a47bc, #bc479c);
+        background: linear-gradient(60deg, #ffffff, #bc479c);
         mix-blend-mode: lighten
     }
 
