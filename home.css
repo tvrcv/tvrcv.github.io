@@ -56,6 +56,19 @@ h1 {
     background: linear-gradient(120deg, #bc479c, #7a47bc);
     text-decoration: none;
     -webkit-text-fill-color: none
+
+    
+}
+
+.blog-text {
+    padding: 0 10px;
+    color: white;
+    transition: all 0.25s;
+    background: linear-gradient(120deg, #ffffff, #ffffff);
+    text-decoration: none;
+    -webkit-text-fill-color: none
+
+    
 }
 
 @media (prefers-color-scheme: dark) {
