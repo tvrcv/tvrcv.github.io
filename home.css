@@ -294,7 +294,7 @@ footer {
 .article-title a {
     text-transform: lowercase;
     font-style: normal !important;
-    color: #1a1a1a
+    color: #ffffff
 }
 
 @media (prefers-color-scheme: dark) {
