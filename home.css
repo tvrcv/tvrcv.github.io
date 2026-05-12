@@ -50,32 +50,91 @@ h1 {
 
 .section-title {
     padding: 0 10px;
-    display: inline-block;
-    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #111;
     transition: all 0.25s;
     background: linear-gradient(120deg, #bc479c, #7a47bc);
     text-decoration: none;
-    -webkit-text-fill-color: none
-
-    
+    -webkit-text-fill-color: black;
+    width: calc(100% - 108px);
+    box-sizing: border-box;
+    height: 36px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
 }
 
-.blog-title {
+.section-header {
+    padding: 0 10px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #111;
+    transition: all 0.25s;
+    background: linear-gradient(120deg, #bc479c, #7a47bc);
+    text-decoration: none;
+    -webkit-text-fill-color: black;
+    width: 100%;
+    box-sizing: border-box;
+    height: 44px;
+    font-size: 1.7rem;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: default;
+    user-select: none;
+}
+
+.section-body {
+    margin-top: 18px;
+    padding-left: 0;
+    max-width: 68rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffffff;
+}
+
+.article-page .col {
+    width: min(92%, 1100px);
+    margin: 0 auto;
+}
+
+.article-page .blog-title {
     font-weight: 300;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 0;
-    font-size: 1.5rem;
-    line-height: normal;
+    font-size: 1.75rem;
+    line-height: 1.9;
     position: relative;
-    background-color: #fff;
-    overflow: hidden;
+    background-color: transparent;
+    overflow: visible;
     padding: 0;
-    margin-top: 5px
+    margin-top: 5px;
+    color: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
     .blog-title {
         background-color: #111
+    }
+}
+
+@media (max-width: 900px) {
+    .article-page .col {
+        width: calc(100% - 32px);
+        max-width: none;
+    }
+
+    .section-header {
+        font-size: 1.5rem;
+        height: 42px;
+    }
+
+    .section-body {
+        max-width: 100%;
     }
 }
 
@@ -94,7 +153,7 @@ h1 {
 
 h2 {
     color: #bc47ba;
-    font-size: 2.4rem;
+    font-size: 1.5rem;
     margin-bottom: 0
 }
 
@@ -106,7 +165,7 @@ h2 {
 
 h3 {
     color: #bc47a6;
-    font-size: 2.4rem;
+    font-size: 1.5rem;
     margin-bottom: 0
 }
 
@@ -289,7 +348,7 @@ footer {
     font-weight: 300;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 0;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: normal;
     position: relative;
     background-color: #fff;
@@ -349,26 +408,6 @@ footer {
     .article-body a:focus {
         background: -webkit-linear-gradient(45deg, #682a73, #73442a);
         -webkit-text-fill-color: transparent
-    }
-}
-
-@supports (mix-blend-mode: lighten) {
-    .article-title:hover::after {
-        position: absolute;
-        content: '';
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        pointer-events: none;
-        background: linear-gradient(60deg, #e45dff, #bc479c);
-        mix-blend-mode: lighten
-    }
-
-    @media (prefers-color-scheme: dark) {
-        .article-title:hover::after {
-            mix-blend-mode: darken
-        }
     }
 }
 
@@ -497,6 +536,28 @@ footer {
 
 .article-meta {
     font-family: "Iter", sans-serif !important
+}
+
+.section-title::after {
+    content: "▼";
+    font-size: 1.15rem;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 12px;
+}
+
+.section-title.collapsed::after {
+    transform: rotate(-90deg);
+}
+
+.collapsible-content {
+    max-height: 10000px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.collapsible-content.collapsed {
+    max-height: 0;
 }
 
 .linux-libertine {
