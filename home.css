@@ -541,7 +541,7 @@ footer {
 .section-title::after {
     content: "▼";
     font-size: 1.15rem;
-    transition: transform 0.3s ease;
+    transition: transform 0s ease;
     flex-shrink: 0;
     margin-left: 12px;
 }
@@ -551,13 +551,11 @@ footer {
 }
 
 .collapsible-content {
-    max-height: 10000px;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
+    display: block;
 }
 
 .collapsible-content.collapsed {
-    max-height: 0;
+    display: none;
 }
 
 .linux-libertine {
