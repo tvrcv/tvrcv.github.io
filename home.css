@@ -468,24 +468,51 @@ footer {
 }
 
 .row {
-    display: flex
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    align-items: start;
+    grid-auto-rows: minmax(min-content, max-content);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
     .row {
-        display: inline-block
+        grid-template-columns: 1fr;
     }
 }
 
 .col {
     padding: 10px;
-    width: 50%
+    width: auto;
+    min-height: 0;
+    display: grid;
+    gap: 12px;
 }
 
 @media only screen and (max-width: 600px) {
     .col {
-        width: 100%
+        width: 100%;
     }
+}
+
+.section-block {
+    display: grid;
+    gap: 6px;
+}
+
+.collapsible-content {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.c-article {
+    margin: 0;
+}
+
+.article-title {
+    margin-top: 0;
 }
 
 .katex {
