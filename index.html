@@ -39,6 +39,7 @@
     </header>
 
     <main id="main" class="main">
+        <button id="globalToggle" class="global-toggle-btn" aria-expanded="false" aria-label="Expand all sections">+</button>
         <div class="row">
             <div class="col">
                 <h1 class="section-title" data-toggle="favorites-section">Favorites</h1>
@@ -316,14 +317,45 @@
     <link rel="stylesheet" href="home.css">
     <script src="https://kit.fontawesome.com/fa2f0e5568.js" crossorigin="anonymous"></script>
     <script>
-        document.querySelectorAll('.section-title').forEach(title => {
-            title.addEventListener('click', function() {
-                const sectionId = this.getAttribute('data-toggle');
-                const section = document.getElementById(sectionId);
+        const globalToggle = document.getElementById('globalToggle');
+        const sectionTitles = Array.from(document.querySelectorAll('.section-title'));
+        const collapsibleContents = sectionTitles
+            .map(title => document.getElementById(title.dataset.toggle))
+            .filter(Boolean);
 
-                this.classList.toggle('collapsed');
-                section.classList.toggle('collapsed');
+        function updateGlobalButton() {
+            const allExpanded = collapsibleContents.every(section => !section.classList.contains('collapsed'));
+            globalToggle.textContent = allExpanded ? '-' : '+';
+            globalToggle.setAttribute('aria-expanded', String(allExpanded));
+            globalToggle.setAttribute('aria-label', allExpanded ? 'Collapse all sections' : 'Expand all sections');
+        }
+
+        function setAllSections(expand) {
+            sectionTitles.forEach(title => title.classList.toggle('collapsed', !expand));
+            collapsibleContents.forEach(section => section.classList.toggle('collapsed', !expand));
+            updateGlobalButton();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            sectionTitles.forEach(title => {
+                const section = document.getElementById(title.dataset.toggle);
+                if (!section) return;
+
+                title.classList.add('collapsed');
+                section.classList.add('collapsed');
+                title.addEventListener('click', function() {
+                    this.classList.toggle('collapsed');
+                    section.classList.toggle('collapsed');
+                    updateGlobalButton();
+                });
             });
+
+            globalToggle.addEventListener('click', () => {
+                const anyCollapsed = collapsibleContents.some(section => section.classList.contains('collapsed'));
+                setAllSections(anyCollapsed);
+            });
+
+            updateGlobalButton();
         });
     </script>
 </body>

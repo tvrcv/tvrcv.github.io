@@ -3,20 +3,24 @@
 }
 
 html {
-    font-size: 80%
+    font-size: 80%;
+    min-height: 100%;
+    overflow-y: scroll;
 }
 
 @media only screen and (max-width: 900px) {
     html {
-        font-size: 70%
+        font-size: 70%;
     }
 }
 
 body {
+    margin: 0;
+    min-height: 100vh;
     color: #444;
     font-size: 1rem;
     font-family: 'Inter', sans-serif;
-    line-height: 1.50
+    line-height: 1.50;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,8 +42,8 @@ h6 {
 
 h1 {
     font-size: 3rem;
-        color: ##62d47f;
-        margin-bottom: 10px
+    color: #62d47f;
+    margin-bottom: 10px
 }
 
 @media (prefers-color-scheme: dark) {
@@ -49,16 +53,16 @@ h1 {
 }
 
 .section-title {
-    padding: 0 10px;
+    padding: 0 22px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #111;
     transition: all 0.25s;
-    background: linear-gradient(120deg, #bc479c, #7a47bc);
+    background: linear-gradient(120deg, #6495ED, #6495ED);
     text-decoration: none;
     -webkit-text-fill-color: black;
-    width: calc(100% - 108px);
+    width: 100%;
     box-sizing: border-box;
     height: 36px;
     font-size: 1.3rem;
@@ -69,13 +73,13 @@ h1 {
 }
 
 .section-header {
-    padding: 0 10px;
+    padding: 0 22px;
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
     color: #111;
     transition: all 0.25s;
-    background: linear-gradient(120deg, #bc479c, #7a47bc);
+    background: linear-gradient(120deg, #6495ED, #6495ED);
     text-decoration: none;
     -webkit-text-fill-color: black;
     width: 100%;
@@ -146,32 +150,32 @@ h1 {
 
 @media (prefers-color-scheme: dark) {
     .section-title {
-        background: linear-gradient(120deg, #d462b5, #9462d4);
+        background: linear-gradient(120deg, #6495ED, #9462d4);
         color: #111
     }
 }
 
 h2 {
-    color: #bc47ba;
+    color: #6495ED;
     font-size: 1.5rem;
     margin-bottom: 0
 }
 
 @media (prefers-color-scheme: dark) {
     h2 {
-        color: #d462d1
+        color: #6495ED
     }
 }
 
 h3 {
-    color: #bc47a6;
+    color: #6495ED;
     font-size: 1.5rem;
     margin-bottom: 0
 }
 
 @media (prefers-color-scheme: dark) {
     h3 {
-        color: #d462be
+        color: #6495ED
     }
 }
 
@@ -184,7 +188,7 @@ p {
 }
 
 a {
-    color: #AB47BC;
+    color: #6495ED;
     text-decoration: none
 }
 
@@ -265,12 +269,12 @@ td {
 
 th {
     font-weight: bold;
-    color: #bc47a6
+    color: #6495ED
 }
 
 @media (prefers-color-scheme: dark) {
     th {
-        color: #d462be
+        color: #6495ED
     }
 }
 
@@ -281,8 +285,8 @@ del {
 blockquote {
     margin: 0;
     padding: 8px 12px;
-    border-left: 3px solid #AB47BC;
-    background-color: rgba(171, 71, 188, 0.1)
+    border-left: 3px solid #6495ED;
+    background-color: rgba(100, 149, 237, 0.1)
 }
 
 blockquote * {
@@ -295,7 +299,7 @@ img {
 }
 
 hr {
-    border: 0.5px solid rgba(171, 71, 188, 0.5)
+    border: 0.5px solid rgba(100, 149, 237, 0.5)
 }
 
 footer {
@@ -303,7 +307,47 @@ footer {
 }
 
 .header {
-    padding-left: 25px
+    position: relative;
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 0;
+    min-height: auto;
+}
+
+.main {
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 880px;
+    margin: -16px auto 0;
+    margin-bottom: 10%;
+    padding-top: 0;
+}
+
+.global-toggle-btn {
+    position: static;
+    display: block;
+    margin: 0 auto 12px;
+    border: none;
+    background-color: #6495ED;
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 999px;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.global-toggle-btn:hover,
+.global-toggle-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(100, 149, 237, 0.25);
 }
 
 .title-link {
@@ -319,14 +363,14 @@ footer {
 .title-link a:hover {
     color: white;
     transition: all 0.25s;
-    background: linear-gradient(120deg, #bc479c, #7a47bc);
+    background: linear-gradient(120deg, #6495ED, #6495ED);
     text-decoration: none;
     -webkit-text-fill-color: none;
 }
 
 @media (prefers-color-scheme: dark) {
     .title-link a:hover {
-        background: linear-gradient(120deg, #d462b5, #9462d4);
+        background: linear-gradient(120deg, #6495ED, #9462d4);
         color: #111
     }
 }
@@ -336,12 +380,12 @@ footer {
 }
 
 .header-links a {
-    color: #bc47ba
+    color: #6495ED
 }
 
 @media (prefers-color-scheme: dark) {
     .header-links a {
-        color: #de58db
+        color: #6495ED
     }
 }
 
@@ -372,7 +416,7 @@ footer {
 
 @media (prefers-color-scheme: dark) {
     .article-title a {
-        color: #de58db;
+        color: #6495ED;
         color: #e6e6e6
     }
 }
@@ -393,13 +437,13 @@ footer {
 
 .article-body a:hover,
 .article-body a:focus {
-    background: -webkit-linear-gradient(45deg, #deb7e5, #e5c7b7);
+    background: -webkit-linear-gradient(45deg, #6495ED, #e5c7b7);
     -webkit-text-fill-color: transparent
 }
 
 @media (prefers-color-scheme: dark) {
     .article-body a {
-        color: #bc6cca
+        color: #6495ED
     }
 }
 
@@ -439,7 +483,7 @@ footer {
 .other-articles {
     margin-bottom: 10%;
     padding: 20px;
-    background-color: rgba(171, 71, 188, 0.15);
+    background-color: rgba(100, 149, 237, 0.15);
     text-align: right
 }
 
@@ -464,23 +508,8 @@ footer {
 }
 
 .notfound h1 {
-    background: linear-gradient(-60deg, #bc479c, #7a47bc);
+    background: linear-gradient(-60deg, #6495ED, #6495ED);
     -webkit-text-fill-color: transparent
-}
-
-.row {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-    width: 100%;
-    align-items: start;
-    grid-auto-rows: minmax(min-content, max-content);
-}
-
-@media only screen and (max-width: 900px) {
-    .row {
-        grid-template-columns: 1fr;
-    }
 }
 
 .col {
@@ -526,11 +555,24 @@ footer {
     line-height: 3.5rem !important
 }
 
-.main {
-    max-width: 65%;
-    margin: 0 auto 0;
-    margin-bottom: 10%
+.row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 424px));
+    row-gap: 24px;
+    column-gap: 32px;
+    width: min(100%, 880px);
+    margin: 0 auto;
+    align-items: start;
+    grid-auto-rows: minmax(min-content, max-content);
 }
+
+@media only screen and (max-width: 900px) {
+    .row {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+}
+
 
 @media only screen and (max-width: 900px) {
     .main {
