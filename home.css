@@ -17,10 +17,33 @@ html {
 body {
     margin: 0;
     min-height: 100vh;
-    color: #444;
+    color: #e6e6e6;
     font-size: 1rem;
     font-family: 'Inter', sans-serif;
     line-height: 1.50;
+    background-image: linear-gradient(rgba(4,8,18,0.35), rgba(4,8,18,0.35)), url("assets/space-bg.png");
+    background-size: cover;
+    background-position: center bottom;
+    background-attachment: fixed;
+    padding-bottom: 64px;
+}
+
+.fixed-footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    padding: 10px 16px;
+    background: rgba(4, 8, 18, 0.75);
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    font-size: 0.9rem;
+    backdrop-filter: blur(10px);
+}
+
+.fixed-footer a {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -309,10 +332,41 @@ footer {
 .header {
     position: relative;
     width: 100%;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 0;
+    padding: 8px 25px 0;
     min-height: auto;
+    background: transparent;
+}
+
+.title-link {
+    font-size: 3rem;
+    margin-bottom: 0;
+    text-transform: none !important;
+    color: rgba(255,255,255,0.92);
+}
+
+.title-link a {
+    text-transform: none !important;
+    color: rgba(255,255,255,0.92);
+    text-decoration: none;
+}
+
+.title-link a:hover {
+    color: rgba(255,255,255,1);
+    background: transparent;
+}
+
+.header-links {
+    font-size: 1.25rem;
+    color: rgba(255,255,255,0.7);
+}
+
+.header-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+}
+
+.header-links a:hover {
+    color: rgba(255,255,255,0.92);
 }
 
 .main {
@@ -321,7 +375,7 @@ footer {
     gap: 10px;
     width: 100%;
     max-width: 880px;
-    margin: -16px auto 0;
+    margin: -28px auto 0;
     margin-bottom: 10%;
     padding-top: 0;
 }
