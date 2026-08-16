@@ -24,9 +24,6 @@ if not INDEX.exists():
     sys.exit(1)
 
 server = Server()
-server.watch(str(ROOT / "index.html"))
-server.watch(str(ROOT / "home.css"))
-server.watch(str(ROOT / "home.js"))
 for path in ROOT.glob("*.html"):
     server.watch(str(path))
 for path in ROOT.glob("*.css"):
