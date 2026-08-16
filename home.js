@@ -24,7 +24,7 @@ const ITEMS = [
   { kind: "video", q: Q(2020, 2), title: "The Federal Reserve vs Covid", by: "", meta: "Video", url: "https://www.youtube.com/watch?v=GI7sBsBHdCk" }
 ];
 
-const LABELS = { all: "all", essay: "writing", book: "books", video: "watch" };
+const LABELS = { all: "all", essay: "my stuff (creations)", book: "books", video: "watch" };
 
 const el = (id) => document.getElementById(id);
 const listEl = el("list");
