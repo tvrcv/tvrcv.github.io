@@ -33,9 +33,10 @@ const statusEl = el("status");
 const emptyEl = el("empty");
 const qEl = el("q");
 const yearEl = el("year");
+const metaEl = el("metaFilter");
 const arrowEl = el("arrow");
 
-let state = { filter: "all", query: "", year: "all", desc: true, cursor: -1 };
+let state = { filter: "all", query: "", year: "all", meta: "all", desc: true, cursor: -1 };
 let visible = [];
 
 const chipEls = document.querySelectorAll(".chip");
@@ -58,16 +59,26 @@ chipEls.forEach((c) => {
     yearEl.appendChild(o);
   });
 
+["all"].concat([...new Set(ITEMS.map((i) => i.meta))].sort())
+  .forEach((m) => {
+    const o = document.createElement("option");
+    o.value = m;
+    o.textContent = m;
+    metaEl.appendChild(o);
+  });
+
 yearEl.addEventListener("change", () => { state.year = yearEl.value; state.cursor = -1; render(); });
+metaEl.addEventListener("change", () => { state.meta = metaEl.value; state.cursor = -1; render(); });
 qEl.addEventListener("input", () => { state.query = qEl.value; state.cursor = -1; render(); });
 qEl.addEventListener("keydown", (e) => { if (e.key === "Escape") { qEl.blur(); reset(); } });
 el("sort").addEventListener("click", () => { state.desc = !state.desc; state.cursor = -1; render(); });
 el("reset").addEventListener("click", reset);
 
 function reset() {
-  state = { filter: "all", query: "", year: "all", desc: state.desc, cursor: -1 };
+  state = { filter: "all", query: "", year: "all", meta: "all", desc: state.desc, cursor: -1 };
   qEl.value = "";
   yearEl.value = "all";
+  metaEl.value = "all";
   render();
 }
 
@@ -103,6 +114,7 @@ function render() {
     .filter((i) =>
       (state.filter === "all" || i.kind === state.filter) &&
       (state.year === "all" || String(i.q.y) === state.year) &&
+      (state.meta === "all" || i.meta === state.meta) &&
       (!q || (i.title + " " + i.by).toLowerCase().includes(q)))
     .sort((a, b) => (state.desc ? b.q.key - a.q.key : a.q.key - b.q.key));
 
@@ -134,6 +146,7 @@ function render() {
   statusEl.textContent =
     visible.length + " of " + ITEMS.length + " entries" +
     (state.year !== "all" ? " \u00b7 " + state.year : "") +
+    (state.meta !== "all" ? " \u00b7 " + state.meta : "") +
     (state.query.trim() ? " \u00b7 matching \u201c" + state.query.trim() + "\u201d" : "");
 }
 
