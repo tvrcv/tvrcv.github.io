@@ -37,7 +37,8 @@ const arrowEl = el("arrow");
 let state = { filter: "all", query: "", year: "all", desc: true, cursor: -1 };
 let visible = [];
 
-document.querySelectorAll(".chip").forEach((c) => {
+const chipEls = document.querySelectorAll(".chip");
+chipEls.forEach((c) => {
   const k = c.dataset.kind;
   const n = k === "all" ? ITEMS.length : ITEMS.filter((i) => i.kind === k).length;
   c.textContent = LABELS[k] + " \u00b7 " + n;
@@ -123,7 +124,7 @@ function render() {
     });
   });
 
-  document.querySelectorAll(".chip").forEach((c) =>
+  chipEls.forEach((c) =>
     c.setAttribute("aria-pressed", String(c.dataset.kind === state.filter)));
 
   arrowEl.textContent = state.desc ? "\u2193" : "\u2191";

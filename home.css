@@ -81,6 +81,7 @@ nav a:hover { text-decoration: underline; }
 /* ---------- table ---------- */
 
 .thead, .row { display: grid; grid-template-columns: 88px 1fr 150px 76px; gap: 0 22px; padding: 0 8px; }
+.h-meta { text-align: right; }
 
 .thead {
   align-items: center; padding-top: 16px; padding-bottom: 11px;
