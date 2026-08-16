@@ -1,361 +1,70 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="referrer" content="no-referrer">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <link rel="stylesheet" href="home.css">
-    <title>Tomás Vargas</title>
-    
-    <!-- Critical CSS - loaded first for fast initial render -->
-    <link rel="stylesheet" href="home.css">
-    
-    <!-- Optimized font loading: only essential fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Inter:wght@400&display=swap" rel="stylesheet">
-    
-    <!-- KaTeX for math rendering -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css"
-        integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js"
-        integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx"
-        crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/mathtex-script-type.min.js"
-        integrity="sha384-zWYbd0NBwgTsgIdFKVprSfTh1mbMPe5Hz1X3yY4Sd1h/K1cQoUe36OGwAGz/PcDy"
-        crossorigin="anonymous"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js"
-        integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Tomás Vargas</title>
+<meta name="description" content="A log of what I read, watch, and generally a space for me to play around.">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="home.css">
 </head>
 
 <body>
-    <div></div>
-    <header class="header">
-        <h1 class="title-link"><a href="">Tomás Vargas</a></h1>
-        <div class="header-links">
-            <a href="https://www.linkedin.com/in/tom%C3%A1s-vargas-renzi/">LinkedIn</a>
-        </div>
-    </header>
-
-    <main id="main" class="main">
-        <button id="globalToggle" class="global-toggle-btn" aria-expanded="false" aria-label="Expand all sections">+</button>
-        <div class="row">
-            <div class="col">
-                <h1 class="section-title" data-toggle="favorites-section">Favorites</h1>
-                <div id="favorites-section" class="collapsible-content">
-
-                <article class="c-article p-list-article">
-
-                    <header>
-                        <h2 class="article-title"><a href="https://www.youtube.com/watch?v=zXPiqk0-zDY">I Made a 32-bit Computer Inside Terraria</a></h2>
-                        <p class="article-meta">
-                            <time datetime="2026-07-05">
-                                2026-07-05
-                            </time>
-
-                            (15 min video)
-
-                        </p>
-                    </header>
-
-                </article>
-
-                <article class="c-article p-list-article">
-
-                    <header>
-                        <h2 class="article-title"><a href="https://delong.typepad.com/files/adler-read.pdf
-                                ">How to read a book by Charles Van Doren & Mortimer J.Adler
-                            </a></h2>
-                        <p class="article-meta">
-                            <time datetime="2024-04-18">
-                                2024-04-18
-                            </time>
-
-                            (57 min video)
-
-                        </p>
-                    </header>
-
-                </article>
-
-                <article class="c-article p-list-article">
-
-                    <header>
-                        <h2 class="article-title"><a
-                                href="https://www.youtube.com/watch?v=dkvFcYBznPI&list=LL&index=2&ab_channel=b2studios">AI
-                                Learns Monopoly</a></h2>
-                        <p class="article-meta">
-                            <time datetime="2023-04-05">
-                                2023-04-05
-                            </time>
-
-                            (12 min video)
-                        </p>
-                    </header>
-
-                </article>
-
-                <article class="c-article p-list-article">
-
-                    <header>
-                        <h2 class="article-title"><a href="https://www.youtube.com/watch?v=5a5VSkkdpB4&list=LL&index=44">
-                                Obama&#39;s Speech to America&#39;s Students
-                            </a></h2>
-                        <p class="article-meta">
-                            <time datetime="2021-05-20">
-                                2021-05-20
-                            </time>
-
-                            (16 min video)
-
-                        </p>
-                    </header>
-
-                </article>
-
-                <article class="c-article p-list-article">
-
-                    <header>
-                        <h2 class="article-title"><a
-                                href="https://www.youtube.com/watch?v=p4X7uXfZ2cY&list=LL&index=27">Foundations of
-                                Happiness - Will Schoder
-                            </a></h2>
-                        <p class="article-meta">
-                            <time datetime="2020-07-30">
-                                2020-07-30
-                            </time>
-
-                            (56 min video)
-
-                        </p>
-                    </header>
-
-                </article>
-
-                <article class="c-article p-list-article">
-
-                    <header>
-                        <h2 class="article-title"><a href=" https://www.youtube.com/watch?v=GI7sBsBHdCk&list=LL&index=30
-                                ">The Federal Reserve vs Covid
-                            </a></h2>
-                        <p class="article-meta">
-                            <time datetime="2020-04-11">
-                                2020-04-11
-                            </time>
-
-                            (3 min video)
-
-                        </p>
-                    </header>
-
-                </article>
-
-                <article class="c-article p-list-article">
-
-                    <header>
-                        <h2 class="article-title"><a href="https://www.youtube.com/watch?v=PK2SMIOHYig&list=LL&index=29&ab_channel=exurb2a
-                                ">The Answer is not a Cabin in the Woods
-                            </a></h2>
-                        <p class="article-meta">
-                            <time datetime="2020-04-11">
-                                2020-04-11
-                            </time>
-
-                            (47 min video)
-
-                        </p>
-                    </header>
-
-                </article>
-
-                <article class="c-article p-list-article">
-
-                    <header>
-                        <h2 class="article-title"><a href="https://www.youtube.com/watch?v=GZTr1-Gp74U&list=LL&index=58&ab_channel=RoaringKitty
-                                ">Original GME DeepValue Play - Roaring Kitty
-                            </a></h2>
-                        <p class="article-meta">
-                            <time datetime="2020-04-11">
-                                2020-04-11
-                            </time>
-
-                            (57 min video)
-
-                        </p>
-                    </header>
-
-                </article>
-
-
-                </div>
-
-                <div class="section-block">
-                    <h1 class="section-title" data-toggle="books-2026-section">2026 Books</h1>
-                    <div id="books-2026-section" class="collapsible-content">
-
-
-            <article class="c-article p-list-article">
-
-                <header>
-                    <h2 class="article-title"><a href="https://sportbook.gr/wp-content/uploads/2023/11/cant-hurt-me-pdf.pdf?srsltid=AfmBOoqQmPMUOK5pC83HxVpR6QJWtiJQ5jsUXUELqAOwq6Ep7F92tgDx
-                            ">Can't hurt me - David Goggins
-                        </a></h2>
-
-                    <p class="article-meta">
-                        <time datetime="2026-04-11">
-
-                        </time>
-                        (2026 Q1 Read)
-                    </p>
-
-                </header>
-
-            </article>
-
-            <article class="c-article p-list-article">
-
-                <header>
-                    <h2 class="article-title"><a href="https://readerslibrary.org/wp-content/uploads/Shogun.pdf
-                            ">Shōgun - James Clavell
-                        </a></h2>
-                    <p class="article-meta">
-                        <time datetime="2026-04-11">
-
-                        </time>
-                        (2026 Q1 Read)
-                    </p>
-
-                </header>
-
-            </article>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="section-block">
-                    <h1 class="section-title" data-toggle="blog-section">Blog Posts</h1>
-                    <div id="blog-section" class="collapsible-content">
-
-
-                <article class="c-article p-list-article">
-
-                    <header>
-                        <h2 class="article-title"><a href="pareto.html">The pareto principle has been inversed (WIP)</a></h2>
-
-                    </header>
-
-                </article>
-                    </div>
-                </div>
-                <div class="section-block">
-                    <h1 class="section-title" data-toggle="books-2025-section">2025 Books</h1>
-                    <div id="books-2025-section" class="collapsible-content">
-
-            <article class="c-article p-list-article">
-
-                <header>
-                    <h2 class="article-title"><a href="https://www.liberalstudies.ca/wp-content/uploads/2014/11/Economics-in-One-Lesson_2.pdf
-                            ">Economics in One lesson - Henry Hazlitt
-                        </a></h2>
-
-                    <p class="article-meta">
-                        <time datetime="2020-04-11">
-
-                        </time>
-                        (2025 Q1 Read)
-                    </p>
-
-                </header>
-
-            </article>
-
-            <article class="c-article p-list-article">
-
-                <header>
-                    <h2 class="article-title"><a href="https://docdrop.org/download_annotation_doc/The-Dawn-of-Everything-by-David-Graeber-David-Wengrow-z-lib.-zmbbo.pdf
-                            ">The Dawn of Everything - A new history of Humanity - David Graeber and David Wengrow
-                        </a></h2>
-                    <p class="article-meta">
-                        <time datetime="2020-04-11">
-
-                        </time>
-                        (2025 Q1 Read)
-                    </p>
-
-                </header>
-
-            </article>
-
-            <article class="c-article p-list-article">
-
-                <header>
-                    <h2 class="article-title"><a href="https://www.bartneck.de/projects/research/pirsig/zen.pdf
-                            ">zen and the art of motorcycle maintenance - Robert M. Pirsig
-                        </a></h2>
-                    <p class="article-meta">
-                        <time datetime="2020-04-11">
-
-                        </time>
-                        (2025 Q1 Read)
-                    </p>
-
-                </header>
-
-            </article>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </main>
-
-    
-    <script src="https://kit.fontawesome.com/fa2f0e5568.js" crossorigin="anonymous"></script>
-    <script>
-        const globalToggle = document.getElementById('globalToggle');
-        const sectionTitles = Array.from(document.querySelectorAll('.section-title'));
-        const collapsibleContents = sectionTitles
-            .map(title => document.getElementById(title.dataset.toggle))
-            .filter(Boolean);
-
-        function updateGlobalButton() {
-            const allExpanded = collapsibleContents.every(section => !section.classList.contains('collapsed'));
-            globalToggle.textContent = allExpanded ? '-' : '+';
-            globalToggle.setAttribute('aria-expanded', String(allExpanded));
-            globalToggle.setAttribute('aria-label', allExpanded ? 'Collapse all sections' : 'Expand all sections');
-        }
-
-        function setAllSections(expand) {
-            sectionTitles.forEach(title => title.classList.toggle('collapsed', !expand));
-            collapsibleContents.forEach(section => section.classList.toggle('collapsed', !expand));
-            updateGlobalButton();
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            sectionTitles.forEach(title => {
-                const section = document.getElementById(title.dataset.toggle);
-                if (!section) return;
-
-                // leave sections expanded by default on first load
-                title.addEventListener('click', function() {
-                    this.classList.toggle('collapsed');
-                    section.classList.toggle('collapsed');
-                    updateGlobalButton();
-                });
-            });
-
-            globalToggle.addEventListener('click', () => {
-                const anyCollapsed = collapsibleContents.some(section => section.classList.contains('collapsed'));
-                setAllSections(anyCollapsed);
-            });
-
-            updateGlobalButton();
-        });
-    </script>
-    <footer class="fixed-footer">
-        Background image: <a href="https://images.nasa.gov/details/GSFC_20171208_Archive_e001129">Lunar Satellite Snaps Image of Earth — NASA / GSFC</a>
-    </footer>
+<main>
+  <header>
+    <div class="id">
+      <h1>tomás vargas<span class="caret">_</span></h1>
+      <p class="bio">A log of what I read, watch, and generally a space for me to play around.</p>
+    </div>
+    <nav>
+      <a href="https://www.linkedin.com/in/tom%C3%A1s-vargas-renzi/">linkedin&nbsp;↗</a>
+      <a href="https://github.com/tvrcv">github&nbsp;↗</a>
+    </nav>
+  </header>
+
+  <div class="controls">
+    <div class="chips">
+      <button class="chip" type="button" data-kind="all" aria-pressed="true"></button>
+      <button class="chip" type="button" data-kind="essay" aria-pressed="false"></button>
+      <button class="chip" type="button" data-kind="book" aria-pressed="false"></button>
+      <button class="chip" type="button" data-kind="video" aria-pressed="false"></button>
+    </div>
+
+    <div class="field year">
+      <label for="year">year</label>
+      <select id="year"></select>
+    </div>
+
+    <div class="field search">
+      <span class="slash" aria-hidden="true">/</span>
+      <input id="q" type="search" placeholder="filter by title or author" autocomplete="off" aria-label="Filter entries">
+    </div>
+  </div>
+
+  <div class="thead">
+    <button id="sort" type="button">Date <span id="arrow">↓</span></button>
+    <span>Title</span>
+    <span class="h-by">Author</span>
+    <span class="h-meta" style="text-align:right">Description</span>
+  </div>
+
+  <div id="list"></div>
+
+  <div id="empty">
+    <p>Nothing matches that.</p>
+    <button id="reset" type="button">clear filters</button>
+  </div>
+
+  <footer>
+    <span id="status"></span>
+    <span>press <kbd>/</kbd> to search &middot; <kbd>j k</kbd> to move &middot; <kbd>↩</kbd> to open &middot; <kbd>esc</kbd> to clear</span>
+  </footer>
+</main>
+
+<script src="home.js"></script>
 </body>
-
 </html>

@@ -1,36 +1,53 @@
 # tvrcv.github.io
 
-Styling of the website was originally taken from : https://kipp.ly/
-twitter of the creator: https://twitter.com/kipperrii?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor
+A log of what I read, watch, and generally a space to play around.
 
-I don't intend to pass the original website styling/structure as mine.
-Loved how the website looked, and wanted to try out github pages, and hosting a website.
+## Structure
 
-I have made several changes since then, but wanted to give credit where credit is due.
+    index.html    the log — markup shell only
+    home.css      all styling (log + article pages)
+    home.js       the entries and the filter/sort/search behaviour
+    pareto.html   an article page
+    serve.py      local live-reload server
 
-Local development
------------------
+## Adding an entry
 
-To run a local live-reload server (recommended using the repo virtualenv):
+Add one line to the `ITEMS` array in `home.js`:
+
+```js
+{ kind: "book", q: Q(2026, 3), title: "Some Book", by: "Author", meta: "Book", url: "https://..." },
+```
+
+`kind` is `essay`, `book`, or `video` (it drives the filter chips).
+`q` is `Q(year, quarter)` — the list sorts newest-first on this.
+`meta` is the short label in the Description column.
+Year options in the dropdown are derived automatically.
+
+## Keyboard
+
+    /        focus search
+    j / k    move the cursor (arrows work too)
+    ↩        open the selected entry
+    esc      clear all filters
+
+## Local development
 
 ```bash
-# activate the repository virtualenv (if not already active)
 source .venv/bin/activate
-# start the live-reload server
 python3 serve.py
 ```
 
-Or run directly without activating the venv:
-
-```bash
-./.venv/bin/python3 serve.py
-```
-
-If you don't use the virtualenv, install the dependency and run:
+Or without the virtualenv:
 
 ```bash
 pip install livereload
 python3 serve.py
 ```
 
-The server serves the site at http://127.0.0.1:8000 and will auto-reload when HTML/CSS/JS files change.
+Serves at http://127.0.0.1:8000 and auto-reloads on HTML/CSS/JS changes.
+
+## History
+
+The site's original styling was adapted from https://kipp.ly/ — credit to
+[@kipperrii](https://twitter.com/kipperrii). That version has since been fully
+replaced; nothing of the original styling remains.
