@@ -8,7 +8,7 @@
 const Q = (y, q) => ({ y, q, label: "Q" + q + " " + y, key: y * 10 + q });
 
 const ITEMS = [
-  { kind: "essay", q: Q(2023, 3), title: "The Pareto principle has been inverted", by: "", meta: "WIP", url: "pareto.html" },
+  { kind: "essay", q: { ...Q(2023, 3), label: "TBD" }, title: "The Pareto principle has been inverted", by: "", meta: "WIP", url: "pareto.html" },
   { kind: "video", q: Q(2026, 3), title: "I Made a 32-bit Computer Inside Terraria", by: "", meta: "Video", url: "https://www.youtube.com/watch?v=zXPiqk0-zDY" },
   { kind: "book",  q: Q(2026, 1), title: "Sh\u014dgun", by: "James Clavell", meta: "Book", url: "https://readerslibrary.org/wp-content/uploads/Shogun.pdf" },
   { kind: "book",  q: Q(2026, 1), title: "Can't Hurt Me", by: "David Goggins", meta: "Book", url: "https://sportbook.gr/wp-content/uploads/2023/11/cant-hurt-me-pdf.pdf" },
