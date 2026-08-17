@@ -8,7 +8,7 @@
 const Q = (y, q) => ({ y, q, label: "Q" + q + " " + y, key: y * 10 + q });
 
 const ITEMS = [
-  { kind: "essay", q: Q(2026, 3), title: "Using Claude Design (and artifacts) to create my Pokemon-like Resume", by: "Tomás Vargas Renzi", meta: "Artifact", url: "https://claude.ai/code/artifact/628be592-96c9-4ab9-9540-00176b6b5d55" },
+  { kind: "essay", q: Q(2026, 3), title: "Using Claude Design (and artifacts) to create my Pokemon-esque Resume", by: "Tomás Vargas Renzi", meta: "Artifact", url: "https://claude.ai/code/artifact/628be592-96c9-4ab9-9540-00176b6b5d55" },
   { kind: "essay", q: { ...Q(2023, 3), label: "TBD" }, title: "The Pareto principle has been inverted", by: "", meta: "WIP", url: "pareto.html" },
   { kind: "video", q: Q(2026, 3), title: "I Made a 32-bit Computer Inside Terraria", by: "", meta: "Video", url: "https://www.youtube.com/watch?v=zXPiqk0-zDY" },
   { kind: "book",  q: Q(2026, 1), title: "Sh\u014dgun", by: "James Clavell", meta: "Book", url: "https://readerslibrary.org/wp-content/uploads/Shogun.pdf" },
