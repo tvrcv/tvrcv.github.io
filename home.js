@@ -8,6 +8,7 @@
 const Q = (y, q) => ({ y, q, label: "Q" + q + " " + y, key: y * 10 + q });
 
 const ITEMS = [
+  { kind: "essay", q: Q(2026, 4), title: "Chrysalis - your personal podcast", by: "Tomás Vargas Renzi", meta: "Application", url: "https://chrysalis-news.vercel.app/app" },
   { kind: "essay", q: Q(2026, 4), title: "Checkout Chaos - a Crossy Road-like game but in supermarket", by: "Tomás Vargas Renzi", meta: "Artifact", url: "https://claude.ai/artifact/KEUkUeayf9zaVbXJgrp4dB" },
   { kind: "essay", q: Q(2026, 3), title: "Using Claude Design (and artifacts) to create my Pokemon-esque Resume", by: "Tomás Vargas Renzi", meta: "Artifact", url: "https://claude.ai/code/artifact/628be592-96c9-4ab9-9540-00176b6b5d55" },
   { kind: "essay", q: { ...Q(2023, 3), label: "TBD" }, title: "The Pareto principle has been inverted", by: "", meta: "WIP", url: "pareto.html" },
