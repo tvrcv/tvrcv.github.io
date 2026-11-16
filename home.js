@@ -13,7 +13,7 @@ const ITEMS = [
   { kind: "essay", q: Q(2026, 3), title: "Using Claude Design (and artifacts) to create my Pokemon-esque Resume", by: "Tomás Vargas Renzi", meta: "Artifact", url: "https://claude.ai/code/artifact/628be592-96c9-4ab9-9540-00176b6b5d55" },
   { kind: "essay", q: { ...Q(2023, 3), label: "TBD" }, title: "The Pareto principle has been inverted", by: "", meta: "WIP", url: "pareto.html" },
   { kind: "video", q: Q(2026, 3), title: "I Made a 32-bit Computer Inside Terraria", by: "", meta: "Video", url: "https://www.youtube.com/watch?v=zXPiqk0-zDY" },
-  { kind: "book",  q: Q(2026, 1), title: "Shōgun", by: "James Clavell", meta: "Book", url: "https://readerslibrary.org/wp-content/uploads/Shogun.pdf" },
+  { kind: "book",  q: Q(2026, 1), title: "Sh\u014dgun", by: "James Clavell", meta: "Book", url: "https://readerslibrary.org/wp-content/uploads/Shogun.pdf" },
   { kind: "book",  q: Q(2026, 1), title: "Can't Hurt Me", by: "David Goggins", meta: "Book", url: "https://sportbook.gr/wp-content/uploads/2023/11/cant-hurt-me-pdf.pdf" },
   { kind: "book",  q: Q(2025, 1), title: "The Dawn of Everything", by: "Graeber & Wengrow", meta: "Book", url: "https://docdrop.org/download_annotation_doc/The-Dawn-of-Everything-by-David-Graeber-David-Wengrow-z-lib.-zmbbo.pdf" },
   { kind: "book",  q: Q(2025, 1), title: "Zen and the Art of Motorcycle Maintenance", by: "Robert M. Pirsig", meta: "Book", url: "https://www.bartneck.de/projects/research/pirsig/zen.pdf" },
@@ -45,7 +45,7 @@ const chipEls = document.querySelectorAll(".chip");
 chipEls.forEach((c) => {
   const k = c.dataset.kind;
   const n = k === "all" ? ITEMS.length : ITEMS.filter((i) => i.kind === k).length;
-  c.textContent = LABELS[k] + " · " + n;
+  c.textContent = LABELS[k] + " \u00b7 " + n;
   c.addEventListener("click", () => {
     state.filter = k;
     state.cursor = -1;
@@ -126,7 +126,7 @@ function render() {
     ' data-i="' + idx + '">' +
       '<span class="date">' + i.q.label + "</span>" +
       '<span class="title">' + esc(i.title) + "</span>" +
-      '<span class="by">' + (i.by ? esc(i.by) : "—") + "</span>" +
+      '<span class="by">' + (i.by ? esc(i.by) : "\u2014") + "</span>" +
       '<span class="meta">' + esc(i.meta) + "</span>" +
     "</a>"
   ).join("");
@@ -142,14 +142,14 @@ function render() {
   chipEls.forEach((c) =>
     c.setAttribute("aria-pressed", String(c.dataset.kind === state.filter)));
 
-  arrowEl.textContent = state.desc ? "↓" : "↑";
+  arrowEl.textContent = state.desc ? "\u2193" : "\u2191";
   emptyEl.classList.toggle("on", visible.length === 0);
 
   statusEl.textContent =
     visible.length + " of " + ITEMS.length + " entries" +
-    (state.year !== "all" ? " · " + state.year : "") +
-    (state.meta !== "all" ? " · " + state.meta : "") +
-    (state.query.trim() ? " · matching “" + state.query.trim() + "”" : "");
+    (state.year !== "all" ? " \u00b7 " + state.year : "") +
+    (state.meta !== "all" ? " \u00b7 " + state.meta : "") +
+    (state.query.trim() ? " \u00b7 matching \u201c" + state.query.trim() + "\u201d" : "");
 }
 
 render();
